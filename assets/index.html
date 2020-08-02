@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <title>Currency Information</title>
+</head>
+
+<body>
+  <h1>Currency Information</h1>
+  <!--
+    This section of the document specifies the table that will
+    be used to display the list of birds and their description
+   -->
+  <table border="1">
+    <tr>
+      <th>Currency Short Form</th>
+      <th>Currency Full Form</th>
+    </tr>
+    <td>PKR</td>
+    <td>Pakistani Rupee</td>
+    </tr>
+  </table>
+  <br/>
+
+  <!--
+    This section contains the form, that will be used to hit the
+    `POST /currency` API that we will build in the next section
+   -->
+  <form action="/currency" method="post">
+    Short Form:
+    <input type="text" name="shortform">
+    <br/> Full Form:
+    <input type="text" name="fullform">
+    <br/>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    currencyTable = document.querySelector("table")
+
+    fetch("/currency")
+      .then(response => response.json())
+      .then(currencyList => {
+        //Once we fetch the list, we iterate over it
+        currencyList.forEach(currency => {
+          // Create the table row
+          row = document.createElement("tr")
+
+
+          shortform = document.createElement("td")
+          shortform.innerHTML = currency.shortform
+          fullform = document.createElement("td")
+          fullform.innerHTML = currency.fullform
+
+          row.appendChild(shortform)
+          row.appendChild(fullform)
+
+          currencyTable.appendChild(row)
+        })
+      })
+  </script>
+</body>

@@ -8,8 +8,18 @@ import (
 )
 
 func newRouter() *mux.Router {
+
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", handler).Methods("GET")
+
+	// Adding static directory
+	staticFileDirectory := http.Dir("./assets/")
+	staticFileHandler := http.StripPrefix("/assets/", http.FileServer(staticFileDirectory))
+	r.PathPrefix("/assets/").Handler(staticFileHandler).Methods("GET")
+
+	r.HandleFunc("/currency", getCurrencyHandler).Methods("GET")
+	r.HandleFunc("/currency", CreateCurrencyHandler).Methods("POST")
+
 	return r
 }
 
