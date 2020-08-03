@@ -18,7 +18,7 @@ func newRouter() *mux.Router {
 	r.PathPrefix("/assets/").Handler(staticFileHandler).Methods("GET")
 
 	r.HandleFunc("/currency", getCurrencyHandler).Methods("GET")
-	r.HandleFunc("/currency", CreateCurrencyHandler).Methods("POST")
+	r.HandleFunc("/currency", createCurrencyHandler).Methods("POST")
 
 	return r
 }
@@ -28,6 +28,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+
 	r := newRouter()
 	http.ListenAndServe(":8080", r)
 }

@@ -23,12 +23,11 @@ func getCurrencyHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
-	// If all goes well, write the JSON list of birds to the response
+	// If all goes well, write the JSON to the response
 	w.Write(currencyListBytes)
 }
 
-//CreateCurrencyHandler ...
-func CreateCurrencyHandler(w http.ResponseWriter, r *http.Request) {
+func createCurrencyHandler(w http.ResponseWriter, r *http.Request) {
 	// Create a new instance of Currency
 	currency := Currency{}
 	err := r.ParseForm()
@@ -44,8 +43,10 @@ func CreateCurrencyHandler(w http.ResponseWriter, r *http.Request) {
 	currency.Shortform = r.Form.Get("shortform")
 	currency.Fullform = r.Form.Get("fullform")
 
-	// Append our existing list of currencies with a new entry
-	currencyList = append(currencyList, currency)
+	//Check for blank data
+	if currency.Shortform != "" && currency.Fullform != "" {
+		currencyList = append(currencyList, currency)
+	}
 
 	//Finally, we redirect the user to the original HTML page
 	// (located at `/assets/`), using the http libraries `Redirect` method
