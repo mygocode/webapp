@@ -17,11 +17,11 @@ Run the test cases with
 ~$ go test -v
 ```
 
-## Image 
+## Screen Shots 
 
 Visit the home page ```http://localhost:8080/assets/ ```
 
-User will put the Short and full form of currency and the information will be shown in the grid. 
+User will put the Short and Full form of currency in the text box and the information will be shown in the grid. 
 This application doesn't have update and delete options. 
 
 ![Currency Information-1](https://i.ibb.co/SBPbCDN/Currency-Info-1.png)
