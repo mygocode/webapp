@@ -5,7 +5,16 @@
 
 ## How to run the application
 ```bash
-go run main.go currency_handlers.go
+~$ go run main.go currency_handlers.go 
+OR 
+~$ go run . (If you are in the package where main resides) 
+```
+
+## Test cases 
+
+Run the test cases with 
+```bash
+~$ go test -v
 ```
 
 ## Image 
@@ -17,6 +26,6 @@ This application doesn't have update and delete options.
 
 ![Currency Information-1](https://i.ibb.co/SBPbCDN/Currency-Info-1.png)
 
-After adding some currency data
+**After adding some currency data**
 
 ![Currency Information-2](https://i.ibb.co/hXq3tkW/Currency-Info-2.png)
