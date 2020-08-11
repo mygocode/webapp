@@ -16,3 +16,7 @@ User will put the Short and full form of currency and the information will be sh
 This application doesn't have update and delete options. 
 
 ![Currency Information-1](https://i.ibb.co/Gcb40Ph/Currency-Info-1.png)
+
+After adding some currency data
+
+![Currency Information-2](https://i.ibb.co/hXq3tkW/Currency-Info-2.png)
