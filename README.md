@@ -4,7 +4,7 @@
   Users can download this applicatoin and use it for educational purpose 
 
 ## How to run the application
-```bash
+```shell
 ~$ go run main.go currency_handlers.go 
 OR 
 ~$ go run . (If you are in the package where main resides) 
