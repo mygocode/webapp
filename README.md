@@ -24,9 +24,10 @@ Visit the home page ```http://localhost:8080/assets/ ```
 User will put the Short and Full form of currency in the text box and the information will be shown in the grid. 
 This application doesn't have update and delete options. 
 
-![Currency Information-1](https://i.ibb.co/SBPbCDN/Currency-Info-1.png)
-
-&#x1F534; &#x1F534; **After adding some currency data**
+![Currency Information-1](https://i.ibb.co/SBPbCDN/Currency-Info-1.png)   
+   
+   
+- **After adding some currency data**
 
 
 ![Currency Information-2](https://i.ibb.co/hXq3tkW/Currency-Info-2.png)
