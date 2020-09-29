@@ -27,7 +27,7 @@ This application doesn't have update and delete options.
 ![Currency Information-1](https://i.ibb.co/SBPbCDN/Currency-Info-1.png)   
    
    
-- **After adding some currency data**
+- **After adding some currency data**   
 
 
 ![Currency Information-2](https://i.ibb.co/hXq3tkW/Currency-Info-2.png)
